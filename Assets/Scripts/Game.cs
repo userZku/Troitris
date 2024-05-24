@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -64,10 +65,10 @@ public class Game : MonoBehaviour
 
     private void ResetGame()
     {
-        //SetLevel(1);
-        //SetSore(0);
-        //ResetLevel();
-        //NewRandomBlock();
+        SetLevel(1);
+        SetSore(0);
+        ResetLevel();
+        NewRandomBlock();
         playingGame = true;
     }
 
@@ -261,6 +262,14 @@ public class Game : MonoBehaviour
         return false;
     }
 
+    public void OnContinue()
+    {
+        if (!playingGame)
+        {
+            ResetGame();
+        }
+    }
+
     public void OnLeft()
     {
         if (currentBlock != null)
@@ -294,7 +303,7 @@ public class Game : MonoBehaviour
         }
     }
 
-    public void OnBack()
+    public void OnBackward()
     {
         if (currentBlock != null)
         {
