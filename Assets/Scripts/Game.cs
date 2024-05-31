@@ -42,9 +42,6 @@ public class Game : MonoBehaviour
     void Start()
     {
         ResetGame();
-        CreateLayerWithHole(0, new Vector2Int(3, 3));
-        CreateLayerWithHole(1, new Vector2Int(5, 6));
-        CreateLayerWithHole(2, new Vector2Int(7, 8));
     }
 
     // Update is called once per frame
@@ -68,6 +65,9 @@ public class Game : MonoBehaviour
         SetLevel(1);
         SetSore(0);
         ResetLevel();
+        CreateLayerWithHole(0, new Vector2Int(3, 3));
+        CreateLayerWithHole(1, new Vector2Int(5, 6));
+        CreateLayerWithHole(2, new Vector2Int(7, 8));
         NewRandomBlock();
         playingGame = true;
     }
